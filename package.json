@@ -20,7 +20,8 @@
     "release": "PHANTOM=off gulp release",
     "release-minor": "PHANTOM=off gulp release --type minor",
     "release-major": "PHANTOM=off gulp release --type major",
-    "coverage-publish": "aegir-coverage publish"
+    "coverage-publish": "aegir-coverage publish",
+    "bench": "./scripts/bench.sh"
   },
   "pre-commit": [
     "lint",

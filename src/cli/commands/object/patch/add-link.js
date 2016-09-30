@@ -4,8 +4,8 @@ const utils = require('../../../utils')
 const debug = require('debug')
 const log = debug('cli:object')
 const mDAG = require('ipfs-merkle-dag')
-const waterfall = require('run-waterfall')
-const parallel = require('run-parallel')
+const waterfall = require('async/waterfall')
+const parallel = require('async/parallel')
 const DAGLink = mDAG.DAGLink
 log.error = debug('cli:object:error')
 

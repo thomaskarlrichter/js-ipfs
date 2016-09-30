@@ -11,7 +11,7 @@ const pull = require('pull-stream')
 const sort = require('pull-sort')
 const toStream = require('pull-stream-to-stream')
 const toPull = require('stream-to-pull-stream')
-const waterfall = require('run-waterfall')
+const waterfall = require('async/waterfall')
 
 module.exports = function files (self) {
   const createAddPullStream = () => {

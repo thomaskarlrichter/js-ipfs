@@ -3,7 +3,7 @@
 const utils = require('../../utils')
 const bl = require('bl')
 const fs = require('fs')
-const waterfall = require('run-waterfall')
+const waterfall = require('async/waterfall')
 const debug = require('debug')
 const log = debug('cli:object')
 log.error = debug('cli:object:error')

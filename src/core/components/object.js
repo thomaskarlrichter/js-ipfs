@@ -3,7 +3,7 @@
 const mDAG = require('ipfs-merkle-dag')
 const waterfall = require('async/waterfall')
 const promisify = require('promisify-es6')
-const bs58 = require('bs58')
+const mh = require('multihashes')
 const DAGNode = mDAG.DAGNode
 const DAGLink = mDAG.DAGLink
 
@@ -39,7 +39,7 @@ function parseJSONBuffer (buf) {
       return new DAGLink(
         link.Name,
         link.Size,
-        new Buffer(bs58.decode(link.Hash))
+        mh.fromB58String(link.Hash)
       )
     })
     return new DAGNode(new Buffer(parsed.Data), links)
